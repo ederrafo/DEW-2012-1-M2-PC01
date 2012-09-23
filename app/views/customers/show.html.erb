@@ -14,6 +14,19 @@
   <b>Cart number:</b>
   <%= @customer.cart_number %>
 </p>
+<p>
+  <b>Sales:</b>
+
+<table border="2">
+	<tr><td>Number</td><td>Total</td></tr>
+	<% @customer.sales.each do |sales| %>
+		<tr>
+			<td><%= sales.id  %></td> <td><%= sales.total  %></td>
+		</tr>
+	
+	<% end %>
+</table>
+</p>
 
 
 <%= link_to 'Edit', edit_customer_path(@customer) %> |

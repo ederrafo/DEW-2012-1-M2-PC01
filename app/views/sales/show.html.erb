@@ -4,6 +4,20 @@
   <b>Customer:</b>
   <%= @sale.customer_id %>
 </p>
+<p>
+  <b> Information:</b>
+  <%= @sale.customer.firstname %> <%= @sale.customer.lastname %>
+</p>
+  <b> Products :</b>
+<table>
+	<% @sale.products.each do |producto| %>
+		<tr>
+			<td><%= producto.title  %></td> <td><%= producto.price  %></td>
+		</tr>
+	
+	<% end %>
+</table>
+</p>
 
 <p>
   <b>Total:</b>
