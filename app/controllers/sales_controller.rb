@@ -25,10 +25,13 @@ class SalesController < ApplicationController
   # GET /sales/new.json
   def new
     @sale = Sale.new
+    a = session[:id]
+    @customer = Customer.find(a)
 
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @sale }
+      format.json { render json: @customer }
     end
   end
 

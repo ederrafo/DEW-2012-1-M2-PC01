@@ -1,3 +1,5 @@
 class Detail < ActiveRecord::Base
-  attr_accessible :product_id, :sale_id
+	belongs_to :sale
+	belongs_to :product
+	attr_accessible :product_id, :sale_id
 end
