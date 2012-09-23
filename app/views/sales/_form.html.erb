@@ -19,10 +19,10 @@
     <%= f.label :customer_id %><br />
     <%= f.number_field :customer_id %>
   </div>
-<!--  <div class="field">
+  <div class="field">
     <%= f.label :total %><br />
     <%= f.text_field :total %>
-  </div>-->
+  </div>
   <%= f.association :products, :as => "check_boxes" %> <br />
   <div class="actions">
     <%= f.submit %>
